@@ -9,7 +9,7 @@ COPY package.json package-lock.json ./
 # package.json에 있는 dependency들을 다운로드 함
 RUN npm ci
 
-COPY index.js .
+COPY src/index.js .
 
 #node를 실행하고, index.js 파일을 실행함
 ENTRYPOINT [ "node", "index.js" ]
